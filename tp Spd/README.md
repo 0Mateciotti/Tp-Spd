@@ -8,4 +8,4 @@
 
 ## Proyecto
 
-![Foto Proyecto](C:\Users\mateo\Desktop\tp Spd\imgs\sd.PNG)
+![Foto Proyecto](\imgs\sd.PNG)
