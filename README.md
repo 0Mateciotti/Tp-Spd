@@ -3,7 +3,6 @@
 - Mateo Ciotti
 - Franco Beltrán
 - Facundo Moriconi
-- Ezequie Gonzales
 
 
 
