@@ -8,4 +8,4 @@
 
 ## Proyecto
 
-![Foto Proyecto](\imgs\sd.PNG)
+![Foto Proyecto](\imgs\sd.JPG)
