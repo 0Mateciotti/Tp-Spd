@@ -8,4 +8,4 @@
 
 ## Proyecto
 
-![saraza](\imgs\sd.JPG)
+![saraza](tp Spd/imgs/sd.PNG)
