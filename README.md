@@ -8,4 +8,5 @@
 
 ## Proyecto
 
-![./imgs/sd.PNG](https://github.com/0Mateciotti/Tp-Spd/blob/main/tp%20Spd/imgs/sd.PNG?raw=true))
+
+<img src="https://github.com/0Mateciotti/Tp-Spd/blob/main/tp%20Spd/imgs/sd.PNG" width="800"/>
