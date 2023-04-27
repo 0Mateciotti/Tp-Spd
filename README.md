@@ -8,4 +8,4 @@
 
 ## Proyecto
 
-![sar aza](Tp-Spd/tp Spd/imgs/sd.PNG)
+![sar aza](Tp-Spd/tp Spd/imgs/sd.png)
