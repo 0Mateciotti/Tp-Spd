@@ -1,0 +1,108 @@
+/*C++ code
+  Matias Diaz DIV J TT
+  Ejercicio Dojo 1 SPD: 
+
+1- El semáforo tiene que tener 2 leds de cada color como minimo,
+en caso de que uno se rompa, lo ideal serian 3.
+
+2- Tiene que implementar los tiempos correctos como se detallan 
+a continuación.
+
+3- El verde dura 45 segundos.
+4- El amarillo dura 5 segundos.
+5- Rojo dura 30 segundos.
+
+6- Tiene que tener señalización para personas no videntes como 
+se detalla acontinuación.
+
+7- Durante el verde: No sonar
+8- Durante el amarillo: Tiene que sonar 1 vez cada 2 segundos en un tono suave.
+9- Durante el rojo: Tiene que sonar 1 vez por segundo en un tono fuerte.
+*/
+
+#define BUZZER 10
+#define LEDROJO 13
+#define LEDAMARILLO 12
+#define LEDVERDE 11
+int contador = 0;
+
+void setup(){
+  for(int i = 11; i <= 13; i++){
+    
+    pinMode(i, OUTPUT);
+  }
+  Serial.begin(9600);
+}
+
+void loop(){ 
+  Serial.println(contador);
+  prenderSemaforo(contador);
+  contador++;
+  
+  if(contador > 2){
+     contador = 0;
+  }
+}
+
+void prenderSemaforo(int contador){
+ 
+    if(contador == 0){
+
+      encenderYApagarSemaforo(LEDROJO, 3000,0);
+      
+    } else if(contador == 1){
+
+      encenderYApagarSemaforo(LEDAMARILLO,5000,1500);
+      
+    } else if(contador == 2) {
+      
+      encenderYApagarSemaforo(LEDVERDE, 4500,0);
+    }
+}
+
+void sonarBuzzer(int buzzer, int tono,int tiempo){
+    // Recibe el pin del buzzer, el tono y el tiempo para encenderlo
+   tone(buzzer, tono, tiempo);
+}
+
+void encenderYApagarSemaforo(int led, int tiempo,int espera){
+  /*Para el caso de cada color del semaforo enciende el led, el buzzer de
+  ser necesario y apaga el led*/
+  //AMARILLO
+  if(led == LEDAMARILLO){
+  
+  digitalWrite(led, HIGH);
+  
+   for(int i=0;i < 2;i++){
+   
+    sonarBuzzer(BUZZER, 100,200);
+     
+	delay(espera);
+  }
+   
+   delay(espera);
+   digitalWrite(led, LOW);
+  }else{
+  
+  //ROJO
+   if(led == LEDROJO){
+     
+    sonarBuzzer(BUZZER, 440, 1000);
+	encenderYApagarLed(led, tiempo);
+   
+   }else{
+   //VERDE
+    encenderYApagarLed(led, tiempo);
+   }
+  }
+}
+
+void encenderYApagarLed(int led, int tiempo){
+  /*Reccibe por parametro el pin del del a prender y cuanto
+  tiempo dejarlo prendido*/
+  digitalWrite(led, HIGH);
+  delay(tiempo);
+  digitalWrite(led, LOW);
+}
+
+
