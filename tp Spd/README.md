@@ -8,4 +8,4 @@
 
 ## Proyecto
 
-![Foto Proyecto](\imgs\sd.JPG)
+![Foto Proyecto](tp Spd\imgs\sd.JPG)
