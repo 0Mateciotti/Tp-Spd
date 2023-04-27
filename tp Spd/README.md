@@ -1,4 +1,4 @@
-##Integrantes
+## Integrantes
 - Matias Díaz
 - Mateo Ciotti
 - Franco Beltrán
@@ -6,6 +6,6 @@
 
 
 
-##Proyecto
+## Proyecto
 
 C:\Users\mateo\Desktop\tp Spd\imgs\sd.PNG
