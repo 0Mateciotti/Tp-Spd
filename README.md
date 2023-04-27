@@ -2,7 +2,6 @@
 - Matias Díaz
 - Mateo Ciotti
 - Franco Beltrán
-- Facundo Moriconi
 
 
 
